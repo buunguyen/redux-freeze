@@ -1,7 +1,7 @@
 {
   "name": "redux-freeze",
   "version": "0.1.2",
-  "description": "Redux middleware that freezes state from being mutated anywhere in the app",
+  "description": "Redux middleware that prevents state from being mutated anywhere in the app",
   "main": "lib/middleware.js",
   "scripts": {
     "prepublish": "rimraf lib && babel src --out-dir lib",

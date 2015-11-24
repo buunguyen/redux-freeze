@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/buunguyen/redux-freeze.svg?branch=master)](https://travis-ci.org/buunguyen/redux-freeze)
 
-Redux middleware that freezes state from being mutated anywhere in the app. When mutation occurs, an error will be thrown by the runtime. This is useful during development mode to ensure that no part of the app accidentally mutates the state.
+Redux middleware that prevents state from being mutated anywhere in the app. When mutation occurs, an error will be thrown by the runtime. This is useful during development mode to ensure that no part of the app accidentally mutates the state.
 
 ### Usage
 
