@@ -1,0 +1,39 @@
+{
+  "name": "redux-freeze",
+  "version": "0.1.1",
+  "description": "Redux middleware that freezes state from being mutated anywhere in the app",
+  "main": "lib/middleware.js",
+  "scripts": {
+    "prepublish": "rimraf lib && babel src --out-dir lib",
+    "test": "mocha --compilers js:babel/register 'test/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buunguyen/redux-freeze.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "flux",
+    "middleware",
+    "redux-middleware",
+    "freeze",
+    "immutability"
+  ],
+  "author": "Buu Nguyen <buunguyen@gmail.com> (https://github.com/buunguyen)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/buunguyen/redux-freeze/issues"
+  },
+  "homepage": "https://github.com/buunguyen/redux-freeze#readme",
+  "devDependencies": {
+    "babel": "^5.8.34",
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "rimraf": "^2.4.4",
+    "sinon": "^1.17.2"
+  },
+  "dependencies": {
+    "deep-freeze": "0.0.1"
+  }
+}
