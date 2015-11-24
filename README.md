@@ -9,10 +9,10 @@ Redux middleware that freezes state from being mutated anywhere in the app. When
 ### Usage
 
 ```js
-const middleware = []
+// Only includes in DEV mode
 if (__DEV__) {
   const freeze = require('redux-freeze')
-  middleware.push(freeze)
+  reduxMiddleware.push(freeze)
 }
 ```
 

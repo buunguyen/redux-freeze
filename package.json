@@ -1,6 +1,6 @@
 {
   "name": "redux-freeze",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Redux middleware that freezes state from being mutated anywhere in the app",
   "main": "lib/middleware.js",
   "scripts": {
