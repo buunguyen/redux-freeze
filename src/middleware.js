@@ -6,7 +6,11 @@ import deepFreeze from 'deep-freeze'
 export default function freeze(store) {
   return next => action => {
     deepFreeze(store.getState())
-    next(action)
-    deepFreeze(store.getState())
+    try {
+      return next(action)
+    }
+    finally {
+      deepFreeze(store.getState())
+    }
   }
 }
