@@ -30,4 +30,22 @@ describe('redux-freeze', () => {
       state.prop = 0
     }, TypeError)
   })
+
+  it('should not attempt to freeze non-object values', () => {
+    const nonObjectValues = [
+      undefined,
+      null,
+      0,
+      ''
+    ]
+
+    nonObjectValues.forEach(state => {
+      const getState = () => state
+      const next = () => {}
+
+      assert.doesNotThrow(() => {
+        freeze({dispatch, getState})(next)()
+      })
+    })
+  })
 })
