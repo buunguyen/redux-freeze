@@ -22,3 +22,11 @@ if (__DEV__) {
 npm install
 npm test
 ```
+
+### Changes
+
+__0.1.4__
+* Fix bug error is thrown when state is not freezable
+
+__0.1.3__
+* Fix bug result of the middleware is not returned
