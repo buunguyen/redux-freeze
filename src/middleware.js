@@ -5,12 +5,21 @@ import deepFreeze from 'deep-freeze'
  */
 export default function freeze(store) {
   return next => action => {
-    deepFreeze(store.getState())
+    freezeStoreState(store)
     try {
       return next(action)
     }
     finally {
-      deepFreeze(store.getState())
+      freezeStoreState(store)
     }
   }
+}
+
+function freezeStoreState(store) {
+  const state = store.getState()
+  if (isFreezable(state)) deepFreeze(state)
+}
+
+function isFreezable(value) {
+  return value !== null && typeof value === 'object'
 }
