@@ -17,7 +17,9 @@ export default function freeze(store) {
 
 function freezeStoreState(store) {
   const state = store.getState()
-  if (isFreezable(state)) deepFreeze(state)
+  if (isFreezable(state)) {
+    deepFreeze(state)
+  }
 }
 
 function isFreezable(value) {

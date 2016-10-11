@@ -25,8 +25,11 @@ npm test
 
 ### Changes
 
+__0.1.5__
+* Fix bug error is thrown when an object in the state has null prototype
+
 __0.1.4__
-* Fix bug error is thrown when state is not freezable
+* Fix bug error is thrown when the state is not freezable
 
 __0.1.3__
 * Fix bug result of the middleware is not returned
