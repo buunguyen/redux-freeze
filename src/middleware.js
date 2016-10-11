@@ -1,4 +1,4 @@
-import deepFreeze from 'deep-freeze'
+import deepFreeze from 'deep-freeze-strict'
 
 /**
  * Middleware that prevents state from being mutated anywhere in the app.

@@ -48,4 +48,17 @@ describe('redux-freeze', () => {
       })
     })
   })
+
+  it('should throw when mutation occurs on an object without the Object prototype', () => {
+    const state = Object.create(null, { x: {} })
+    const getState = () => state
+    const next = () => {}
+
+    freeze({dispatch, getState})(next)()
+
+    assert.throws(() => {
+      const state = getState()
+      state.x.y = 0
+    }, TypeError)
+  })
 })
