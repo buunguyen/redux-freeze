@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/buunguyen/redux-freeze#readme",
   "devDependencies": {
+    "@types/redux": "^3.6.0",
     "babel": "^5.8.34",
     "chai": "^3.4.1",
     "mocha": "^2.3.4",
