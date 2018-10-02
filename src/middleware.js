@@ -4,6 +4,7 @@ import deepFreeze from 'deep-freeze-strict'
  * Middleware that prevents state from being mutated anywhere in the app.
  */
 export default function freeze(store) {
+  freezeStoreState(store)
   return next => action => {
     freezeStoreState(store)
     try {
