@@ -61,4 +61,12 @@ describe('redux-freeze', () => {
       state.x.y = 0
     }, TypeError)
   })
+
+  it('should freeze initial state', () => {
+    const state = {}
+    const getState = () => state
+
+    freeze({dispatch, getState})
+    assert.isTrue(Object.isFrozen(state))
+  })
 })
