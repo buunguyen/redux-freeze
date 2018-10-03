@@ -25,6 +25,9 @@ npm test
 
 ### Changes
 
+__0.1.7__
+* Fix bug state not frozen before the first dispatch
+
 __0.1.5__
 * Fix bug error is thrown when an object in the state has null prototype
 

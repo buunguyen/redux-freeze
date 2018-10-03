@@ -41,11 +41,7 @@ describe('redux-freeze', () => {
 
     nonObjectValues.forEach(state => {
       const getState = () => state
-      const next = () => {}
-
-      assert.doesNotThrow(() => {
-        freeze({dispatch, getState})(next)()
-      })
+      assert.doesNotThrow(() => freeze({dispatch, getState}))
     })
   })
 
@@ -67,6 +63,9 @@ describe('redux-freeze', () => {
     const getState = () => state
 
     freeze({dispatch, getState})
-    assert.isTrue(Object.isFrozen(state))
+    assert.throws(() => {
+      const state = getState()
+      state.prop = 0
+    }, TypeError)
   })
 })
